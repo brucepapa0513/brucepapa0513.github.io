@@ -6,16 +6,28 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hexo + GithubPage搭载Blog指南 | Bruce&#39;s Blog</title>
+  <title>Hexo + GithubPage搭建博客指南 | Bruce&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="教程">
+  <meta name="description" content="网上关于Hexo + Github搭建博客的指南很多，但各种教程良莠不齐，系统、版本也新旧不一，在实际搭建过程中，会产生各种问题，倒置开发卡壳。本文基于Win10系统环境进行搭建，并总结开发过程中遇到的问题，希望给各位开发者带来便利。">
+<meta name="keywords" content="教程">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo + GithubPage搭载Blog指南">
+<meta property="og:title" content="Hexo + GithubPage搭建博客指南">
 <meta property="og:url" content="http://yoursite.com/2017/04/20/Instruction-for-Hexo/index.html">
 <meta property="og:site_name" content="Bruce's Blog">
-<meta property="og:updated_time" content="2017-04-20T14:57:07.717Z">
+<meta property="og:description" content="网上关于Hexo + Github搭建博客的指南很多，但各种教程良莠不齐，系统、版本也新旧不一，在实际搭建过程中，会产生各种问题，倒置开发卡壳。本文基于Win10系统环境进行搭建，并总结开发过程中遇到的问题，希望给各位开发者带来便利。">
+<meta property="og:image" content="http://yoursite.com/assets/img/nodejs.png">
+<meta property="og:image" content="http://yoursite.com/assets/img/gitbash.png">
+<meta property="og:image" content="http://yoursite.com/assets/img/hexoProfiles.png">
+<meta property="og:image" content="http://yoursite.com/assets/img/githubRegister.png">
+<meta property="og:image" content="http://yoursite.com/assets/img/createRepository.png">
+<meta property="og:image" content="http://yoursite.com/assets/img/modifyConfig.png">
+<meta property="og:image" content="http://yoursite.com/assets/img/registerDomain.png">
+<meta property="og:image" content="http://yoursite.com/assets/img/dns.png">
+<meta property="og:updated_time" content="2017-04-24T08:54:22.072Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo + GithubPage搭载Blog指南">
+<meta name="twitter:title" content="Hexo + GithubPage搭建博客指南">
+<meta name="twitter:description" content="网上关于Hexo + Github搭建博客的指南很多，但各种教程良莠不齐，系统、版本也新旧不一，在实际搭建过程中，会产生各种问题，倒置开发卡壳。本文基于Win10系统环境进行搭建，并总结开发过程中遇到的问题，希望给各位开发者带来便利。">
+<meta name="twitter:image" content="http://yoursite.com/assets/img/nodejs.png">
   
     <link rel="alternative" href="/atom.xml" title="Bruce&#39;s Blog" type="application/atom+xml">
   
@@ -148,7 +160,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Hexo + GithubPage搭载Blog指南
+      Hexo + GithubPage搭建博客指南
     </h1>
   
 
@@ -161,7 +173,23 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>网上关于Hexo + Github搭建博客的指南很多，但各种教程良莠不齐，系统、版本也新旧不一，在实际搭建过程中，会产生各种问题，倒置开发卡壳。本文基于Win10系统环境进行搭建，并总结开发过程中遇到的问题，希望给各位开发者带来便利。</p>
+<a id="more"></a>
+<h2 id="基础环境"><a href="#基础环境" class="headerlink" title="基础环境"></a><strong>基础环境</strong></h2><p>Git和Node.js是hexo博客开发的两个基础环境，需提前下载安装。<br> <strong><em>Git工具</em></strong><br>根据自己的操作系统下载安装即可。<br>下载地址：<a href="https://git-scm.com/" target="_blank" rel="external">Git工具</a></p>
+<p> <strong><em>Node.js</em></strong><br><img src="/assets/img/nodejs.png" alt="Node.js版本区别"><br>Node.js分两个版本，LTS版本更稳定，适用于大部分用户；而Current版本为当前最新版本，支持Node.js的最新功能。如是新手玩家，个人推荐安装Current版本，以作者为例，原本下载的是v6.1的LTS版本，而选择的博客主题需要v6.2版本以上方能运行，最后不得不卸载LTS版本，重新安装了最新版本。<br>下载地址:<a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a></p>
+<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a><strong>安装Hexo</strong></h2><p>首先，在桌面的任意位置鼠标右键，选择Git Bash<br><img src="/assets/img/gitbash.png" alt="安装Hexo"><br>在命令行窗口输入以下命令<br>注意：-g是指全局安装Hexo<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g hexo</div></pre></td></tr></table></figure></p>
+<p>安装完成后，在自己想要放置博客的文件夹下执行以下命令(使用cd命令转至目标文件夹，或在目标文件夹下鼠标右键，选择Git Bash)，Hexo会自动在目标文件夹下建立网站所需要的所有文件。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo init</div></pre></td></tr></table></figure></p>
+<p>初始化命令执行完毕后，会在目标文件夹下生成以下文件:<br><img src="/assets/img/hexoProfiles.png" alt="hexo初始化后生成的文件"></p>
+<p>至此，Hexo已经安装完毕，你可以使用Hexo命令来运行本地服务器。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div><div class="line">$ hexo server</div></pre></td></tr></table></figure></p>
+<p>server启动后，可在浏览器中输入 “localhost:4000” 来查看博客内容。</p>
+<h2 id="开启GithubPage"><a href="#开启GithubPage" class="headerlink" title="开启GithubPage"></a><strong>开启GithubPage</strong></h2><p><strong><em>注册Github账号</em></strong><br>若已注册，则跳过该步骤。<br><img src="/assets/img/githubRegister.png" alt="注册Github账号"></p>
+<p><strong><em>创建Repository</em></strong><br>点击new repository，创建一个属于自己的repository，命名规范：yourname.github.io。<br><img src="/assets/img/createRepository.png" alt="创建Repository"></p>
+<p><strong><em>修改_config.yml文件</em></strong><br>推荐使用Atom编辑该文件，打开文件后，拉至最下，修改配置文件如图。<br><img src="/assets/img/modifyConfig.png" alt="修改config.yml"><br>注意，type和branch按照规范填写即可，而红色框线部分应修改为自己的用户名。</p>
+<p><strong><em>部署hexo</em></strong><br>在部署前，需执行以下命令，方可执行部署命令件。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git --save</div></pre></td></tr></table></figure></p>
+<p>随后，我们执行deploy命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm hexo deploy</div></pre></td></tr></table></figure></p>
+<p>等待部署完毕后，我们可以在浏览器中输入”brucepapa0513.git.io”来访问部署完毕的博客。</p>
+<h2 id="域名绑定"><a href="#域名绑定" class="headerlink" title="域名绑定"></a><strong>域名绑定</strong></h2><p>通过”yourname.git.io”的方式访问自己的博客始终不太美观，也没有个人的归属感，因此，很多人希望能够通过自己的域名来访问博客。<br><img src="/assets/img/registerDomain.png" alt="注册域名"><br>首先，作者选择的是在万网注册自己的域名。<br><img src="/assets/img/dns.png" alt="域名解析"><br>注册完成后，将域名解析到githubpage所在的IP即可(在CMD命令行中，输入ping yourname.git.io来解析ip)。</p>
+
       
 
       
@@ -263,20 +291,6 @@
 </article>
 
   
-<nav id="article-nav">
-  
-    <a href="/2017/04/20/66666/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          66666
-        
-      </div>
-    </a>
-  
-  
-</nav>
-
 
 
 
