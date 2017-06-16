@@ -141,6 +141,72 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-HTTP请求" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/15/HTTP请求/">Http实现软件更新</a>
+    </h1>
+  
+
+        
+        <a href="/2017/06/15/HTTP请求/" class="archive-article-date">
+  	<time datetime="2017-06-15T14:04:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-15</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>目前，大部分的网络服务都构建在B/S架构的基础上，而用C#开发桌面端程序经常需要用到HTTP请求来获取资源或者发送后台请求。网上关于Http杂七杂八的文章很多，在此做个总结，然后提供一个使用Http进行软件更新的demo。</p>
+<h2 id="HTTP介绍"><a href="#HTTP介绍" class="headerlink" title="HTTP介绍"></a><strong>HTTP介绍</strong></h2><p>Http最常用的就是GET和POST，因此在给出的Http类里，主要对这两种方法进行了封装。由于很多网站已经升级HTTPS，因此代码里总是接受安全证书下载，否则会导致请求失败。</p>
+        
+          <a class="article-more-a" href="/2017/06/15/HTTP请求/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">编程</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">C#</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/06/15/HTTP请求/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-Instruction-for-Hexo" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -162,6 +228,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>网上关于Hexo + Github搭建博客的指南很多，但各种教程良莠不齐，系统、版本也新旧不一，在实际搭建过程中，会产生各种问题，倒置开发卡壳。本文基于Win10系统环境进行搭建，并总结开发过程中遇到的问题，希望给各位开发者带来便利。</p>
+<h2 id="基础环境"><a href="#基础环境" class="headerlink" title="基础环境"></a><strong>基础环境</strong></h2><p>Git和Node.js是hexo博客开发的两个基础环境，需提前下载安装。<br> <strong><em>Git工具</em></strong><br>根据自己的操作系统下载安装即可。<br>下载地址：<a href="https://git-scm.com/">Git工具</a></p>
+<p> <strong><em>Node.js</em></strong><br><img src="/assets/img/nodejs.png" alt="Node.js版本区别"><br>Node.js分两个版本，LTS版本更稳定，适用于大部分用户；而Current版本为当前最新版本，支持Node.js的最新功能。如是新手玩家，个人推荐安装Current版本，以作者为例，原本下载的是v6.1的LTS版本，而选择的博客主题需要v6.2版本以上方能运行，最后不得不卸载LTS版本，重新安装了最新版本。<br>下载地址:<a href="https://nodejs.org/en/">Node.js</a></p>
         
           <a class="article-more-a" href="/2017/04/20/Instruction-for-Hexo/#more">more >></a>
         
@@ -287,11 +355,15 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">教程</a>
+                <a href="javascript:void(0)" class="js-tag color3">编程</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">游戏</a>
+                <a href="javascript:void(0)" class="js-tag color3">C#</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">教程</a>
               </li>
             
             <div class="clearfix"></div>
